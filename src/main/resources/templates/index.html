@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Index Page</title>
+<link th:href = "@{assets/css/booty.css}" rel="stylesheet">
+</head>
+<body>
+<div align="center">
+	<h2>Book Ticket</h2>
+	
+	<form th:action="@{/bookTicket}" th:object="${passenger}" method="post">
+		<table>
+			<tr>
+				<td>First Name: </td>
+				<td><input type="text" th:field="*{fname}" required></td>
+			</tr>
+			<tr>
+				<td>Last Name: </td>
+				<td><input type="text" th:field="*{lname}" required></td>
+			</tr>
+			<tr>
+				<td>Date of Journey: </td>
+				<td><input type="text" th:field="*{doj}" required></td>
+			</tr>
+			<tr>
+				<td>From Location: </td>
+				<td><input type="text" th:field="*{from}" required></td>
+			</tr>
+			<tr>
+				<td>To Location: </td>
+				<td><input type="text" th:field="*{to}" required></td>
+			</tr>
+				<tr>
+				<td>Train Number: </td>
+				<td><input type="text" th:field="*{trainNum}" required></td>
+			</tr>
+			<tr><td></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td></td></tr>
+			<tr>
+				<td></td>
+				<td><input  class="btn btn-primary" role="button" type="submit" value="Book" /></td>
+			</tr>
+		</table>
+	</form>
+</div>	
+</body>
+</html>
